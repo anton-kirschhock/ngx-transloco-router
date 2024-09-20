@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { TranslocoModule } from '@jsverse/trransloco';
 import { BobComponent } from './bob/bob.component';
-import { Test2Component } from './test2/test2.component';
 import { TestRoutingModule } from './test.routing.module';
-import { TranslocoModule } from '@ngneat/transloco';
+import { Test2Component } from './test2/test2.component';
 
 @NgModule({
   declarations: [BobComponent, Test2Component],

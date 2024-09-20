@@ -1,19 +1,19 @@
-﻿import { Injectable, NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './not-found/not-found.component';
 import {
   LOCALIZE_ROUTER_CONFIG,
   LocalizeParser,
   LocalizeRouterConfig,
   localizeRouterConfig,
+  LocalizeRouterModule,
 } from '@penleychan/ngx-transloco-router';
-import { LocalizeRouterModule } from '@penleychan/ngx-transloco-router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-import { HomeComponent } from './home/home.component';
-import { baseMatcher } from './matcher/matcher.module';
-import { detailMatcher } from './matcher/matcher-detail/matcher-detail.module';
-import { TranslocoService } from '@ngneat/transloco';
 import { Location } from '@angular/common';
+import { TranslocoService } from '@jsverse/transloco';
+import { HomeComponent } from './home/home.component';
+import { detailMatcher } from './matcher/matcher-detail/matcher-detail.module';
+import { baseMatcher } from './matcher/matcher.module';
 
 const routes: Routes = [
   {

@@ -1,38 +1,36 @@
+import { CommonModule, Location } from '@angular/common';
 import {
   APP_INITIALIZER,
   Injectable,
   Injector,
   ModuleWithProviders,
   NgModule,
-  SkipSelf,
   Optional,
   Provider,
-  Inject,
-  inject,
+  SkipSelf
 } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
-import {
-  DefaultLocalizeParser,
-  LocalizeParser,
-} from './localize-router.parser';
 import {
   Router,
   RouteReuseStrategy,
   RouterModule,
   Routes,
 } from '@angular/router';
-import { LocalizeRouterService } from './localize-router.service';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
+import { GilsdavReuseStrategy } from './gilsdav-reuse-strategy';
 import {
   LOCALIZE_ROUTER_CONFIG,
   LOCALIZE_ROUTER_FORROOT_GUARD,
   LocalizeRouterConfig,
   RAW_ROUTES,
 } from './localize-router.config';
-import { deepCopy } from './util';
-import { GilsdavReuseStrategy } from './gilsdav-reuse-strategy';
-import { LocalizedRouter } from './localized-router';
-import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import {
+  DefaultLocalizeParser,
+  LocalizeParser,
+} from './localize-router.parser';
 import { LocalizeRouterPipe } from './localize-router.pipe';
+import { LocalizeRouterService } from './localize-router.service';
+import { LocalizedRouter } from './localized-router';
+import { deepCopy } from './util';
 
 @Injectable()
 export class ParserInitializer {

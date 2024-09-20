@@ -1,13 +1,13 @@
 ﻿import { HttpClient } from '@angular/common/http';
-import {
-  TRANSLOCO_LOADER,
-  Translation,
-  TranslocoLoader,
-  TRANSLOCO_CONFIG,
-  translocoConfig,
-  TranslocoModule
-} from '@ngneat/transloco';
 import { Injectable, NgModule } from '@angular/core';
+import {
+  Translation,
+  TRANSLOCO_CONFIG,
+  TRANSLOCO_LOADER,
+  translocoConfig,
+  TranslocoLoader,
+  TranslocoModule,
+} from '@jsverse/transloco';
 import { environment } from '../environments/environment';
 
 @Injectable({ providedIn: 'root' })
@@ -20,7 +20,7 @@ export class TranslocoHttpLoader implements TranslocoLoader {
 }
 
 @NgModule({
-  exports: [ TranslocoModule ],
+  exports: [TranslocoModule],
   providers: [
     {
       provide: TRANSLOCO_CONFIG,
@@ -31,9 +31,9 @@ export class TranslocoHttpLoader implements TranslocoLoader {
         // doesn't support changing language in runtime.
         reRenderOnLangChange: true,
         prodMode: environment.production,
-      })
+      }),
     },
-    { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader }
-  ]
+    { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },
+  ],
 })
 export class TranslocoRootModule {}

@@ -1,14 +1,14 @@
-﻿import { Routes, Route, NavigationExtras, Params } from '@angular/router';
+﻿import { Location } from '@angular/common';
+import { HttpParams } from '@angular/common/http';
+import { Inject, Injectable, Optional } from '@angular/core';
+import { NavigationExtras, Params, Route, Routes } from '@angular/router';
+import { flatten, getBrowserLang, TranslocoService } from '@jsverse/transloco';
 import { firstValueFrom, Observable, Observer } from 'rxjs';
-import { Location } from '@angular/common';
 import {
   CacheMechanism,
   LOCALIZE_ROUTER_CONFIG,
   LocalizeRouterConfig,
 } from './localize-router.config';
-import { Inject, Injectable, Optional } from '@angular/core';
-import { HttpParams } from '@angular/common/http';
-import { flatten, getBrowserLang, TranslocoService } from '@ngneat/transloco';
 
 const COOKIE_EXPIRY = 30; // 1 month
 

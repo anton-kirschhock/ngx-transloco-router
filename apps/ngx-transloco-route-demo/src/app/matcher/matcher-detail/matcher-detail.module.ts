@@ -1,17 +1,17 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatcherDetailComponent } from './matcher-detail.component';
+import { NgModule } from '@angular/core';
 import {
   RouterModule,
   Routes,
   UrlMatchResult,
   UrlSegment,
 } from '@angular/router';
+import { TranslocoModule } from '@jsverse/transloco';
 import {
   LocalizedMatcherUrlSegment,
   LocalizeRouterModule,
 } from '@penleychan/ngx-transloco-router';
-import { TranslocoModule } from '@ngneat/transloco';
+import { MatcherDetailComponent } from './matcher-detail.component';
 
 export function detailMatcher(baseSegments: UrlSegment[]): UrlMatchResult {
   const segments = [...baseSegments];

@@ -1,15 +1,18 @@
 # @penleychan/ngx-transloco-router
 
 This is a fork/port of [@gilsdav/ngx-translate-router](https://github.com/gilsdav/ngx-translate-router)
-modified to work with [@ngneat/transloco](https://github.com/ngneat/transloco).
+modified to work with [@jsverse/transloco](https://github.com/jsverse/transloco).
 
 ## Install
+
 ```
 npm i @penleychan/ngx-transloco-router
 ```
 
 ## Setup
+
 Bare minimum setup
+
 ```
 @NgModule({
   imports: [
@@ -29,7 +32,9 @@ export class AppRoutingModule {
 ```
 
 ## Translate Route
+
 Enable translate route:
+
 ```
 providers: [
   {
@@ -66,7 +71,9 @@ on your translation files.
   }
 }
 ```
+
 You can override the prefix by configuration
+
 ```
 providers: [
   {
@@ -80,7 +87,9 @@ providers: [
 ```
 
 ## LOCALIZE_ROUTER_CONFIG
+
 These are the configuration settings available and it's defaults
+
 ```
 export const defaultConfig: LocalizeRouterConfig = {
   translateRoute: false,

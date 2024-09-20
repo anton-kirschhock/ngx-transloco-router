@@ -11,7 +11,7 @@ import {
   LocalizedMatcherUrlSegment,
   LocalizeRouterModule,
 } from '@penleychan/ngx-transloco-router';
-import { TranslocoModule } from '@ngneat/transloco';
+import { TranslocoModule } from '@jsverse/transloco';
 
 export function baseMatcher(baseSegments: UrlSegment[]): UrlMatchResult {
   const segments = [...baseSegments];

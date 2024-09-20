@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalizeRouterService } from '@penleychan/ngx-transloco-router';
-import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoService } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-root',

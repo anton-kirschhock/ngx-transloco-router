@@ -1,7 +1,7 @@
 # @penleychan/ngx-transloco-router
 
 This is a fork/port of [@gilsdav/ngx-translate-router](https://github.com/gilsdav/ngx-translate-router) 
-modified to work with [@ngneat/transloco](https://github.com/ngneat/transloco).
+modified to work with [@jsverse/transloco](https://github.com/jsverse/transloco).
 
 ## Install
 ```

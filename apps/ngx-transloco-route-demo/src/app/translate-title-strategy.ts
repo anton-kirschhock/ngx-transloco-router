@@ -1,7 +1,7 @@
 ﻿import { Injectable } from '@angular/core';
-import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
-import { TranslocoService } from '@ngneat/transloco';
 import { Title } from '@angular/platform-browser';
+import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
+import { TranslocoService } from '@jsverse/transloco';
 
 @Injectable()
 export class TranslateTitleStrategy extends TitleStrategy {
